@@ -20,4 +20,8 @@ class EulerTest < MiniTest::Unit::TestCase
     #1, 2, 3, 5, 8, 13, 21, 34, 55, 89
     assert_equal 44, soma_pares_fibonacci(90)
   end
+
+  def test_soma_pares_fibonacci_ate_4_000_000
+    assert_equal 0, soma_pares_fibonacci(4_000_000)
+  end
 end
