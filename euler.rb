@@ -9,6 +9,17 @@ module Euler
   end
 
   def soma_pares_fibonacci(limite)
-    10
+    primeiro = segundo = proximo = 1
+    soma = 0
+    while proximo <= limite
+      if proximo % 2 == 0
+        soma += proximo
+      end
+
+      proximo = primeiro + segundo
+      primeiro = segundo
+      segundo = proximo
+    end
+    soma
   end
 end
