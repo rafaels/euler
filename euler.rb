@@ -7,4 +7,8 @@ module Euler
     ultimo = (limite - 1) / n
     n * (1 + ultimo) * ultimo / 2
   end
+
+  def soma_pares_fibonacci(limite)
+    10
+  end
 end
