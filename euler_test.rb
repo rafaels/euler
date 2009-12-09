@@ -12,4 +12,8 @@ class EulerTest < MiniTest::Unit::TestCase
     assert_equal 233168, soma_multiplos(1000)
   end
 
+  def test_soma_pares_fibonacci_ate_10
+    assert_equal 10, soma_pares_fibonacci(10)
+  end
+
 end
