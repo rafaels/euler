@@ -1,5 +1,5 @@
 module Euler
-  def soma(limite)
+  def soma_multiplos(limite)
     soma_divisiveis_por(3, limite) + soma_divisiveis_por(5, limite) - soma_divisiveis_por(15, limite)
   end
 
