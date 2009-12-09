@@ -1,5 +1,10 @@
+def soma_divisiveis_por(n, limite)
+  ultimo = (limite - 1) / n
+  n * (1 + ultimo) * ultimo / 2
+end
+
 def soma(limite)
-  (1...limite).select {|i| i % 3 == 0 or i % 5 == 0}.reduce(&:+)
+  soma_divisiveis_por(3, limite) + soma_divisiveis_por(5, limite) - soma_divisiveis_por(15, limite)
 end
 
 puts soma(1000)
