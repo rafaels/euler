@@ -9,17 +9,20 @@ module Euler
   end
 
   def soma_pares_fibonacci(limite)
-    primeiro = segundo = proximo = 1
-    soma = 0
-    while proximo <= limite
-      if proximo % 2 == 0
-        soma += proximo
-      end
+    fibonacci_ate(limite).inject(0) do |parcial, elemento|
+      elemento.even? ? parcial + elemento : parcial
+    end
+  end
 
+  def fibonacci_ate(limite)
+    proximo = primeiro = segundo = 1
+    resultado = [1, 1]
+    while proximo <= limite
+      resultado << proximo
       proximo = primeiro + segundo
       primeiro = segundo
       segundo = proximo
     end
-    soma
+    resultado
   end
 end
