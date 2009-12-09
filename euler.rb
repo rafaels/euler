@@ -15,13 +15,9 @@ module Euler
   end
 
   def fibonacci_ate(limite)
-    proximo = primeiro = segundo = 1
     resultado = [1, 1]
-    while proximo <= limite
-      resultado << proximo
-      proximo = primeiro + segundo
-      primeiro = segundo
-      segundo = proximo
+    while resultado[-1] + resultado[-2] <= limite
+      resultado << (resultado[-1] + resultado[-2])
     end
     resultado
   end
