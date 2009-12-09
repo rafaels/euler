@@ -1,10 +1,10 @@
-def soma_divisiveis_por(n, limite)
-  ultimo = (limite - 1) / n
-  n * (1 + ultimo) * ultimo / 2
-end
+module Euler
+  def soma(limite)
+    soma_divisiveis_por(3, limite) + soma_divisiveis_por(5, limite) - soma_divisiveis_por(15, limite)
+  end
 
-def soma(limite)
-  soma_divisiveis_por(3, limite) + soma_divisiveis_por(5, limite) - soma_divisiveis_por(15, limite)
+  def soma_divisiveis_por(n, limite)
+    ultimo = (limite - 1) / n
+    n * (1 + ultimo) * ultimo / 2
+  end
 end
-
-puts soma(1000)
