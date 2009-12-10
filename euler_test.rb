@@ -24,4 +24,12 @@ class EulerTest < MiniTest::Unit::TestCase
   def test_soma_pares_fibonacci_ate_4_000_000
     assert_equal 4613732, soma_pares_fibonacci(4_000_000)
   end
+
+  def test_maior_fator_primo_de_10
+    assert_equal 5, maior_fator_primo(10)
+  end
+
+  def test_maior_fator_primo_de_13195
+    assert_equal 29, maior_fator_primo(13195)
+  end
 end
