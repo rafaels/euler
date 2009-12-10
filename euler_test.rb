@@ -22,6 +22,6 @@ class EulerTest < MiniTest::Unit::TestCase
   end
 
   def test_soma_pares_fibonacci_ate_4_000_000
-    assert_equal 0, soma_pares_fibonacci(4_000_000)
+    assert_equal 4613732, soma_pares_fibonacci(4_000_000)
   end
 end
